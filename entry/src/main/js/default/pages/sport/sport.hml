@@ -1,0 +1,122 @@
+<div class="container">
+    <swiper
+            class="swiper"
+            id="swiper"
+            index="{{ swiperindex }}"
+            indicator="false"
+            indicatormask="false"
+            loop="false"
+            >
+        <div class="swiperContent1">
+            <stack class="stack-parent">
+                <image
+                        class="backgroundImage1"
+                        src="/common/images/sport_background1.png"
+                        >
+                </image>
+                <image
+                        class="backgroundImage2"
+                        src="/common/images/sport_background2.png"
+                        >
+                </image>
+                <image
+                        class="backgroundImage"
+                        src="/common/images/sport_background.png"
+                        >
+                </image>
+                <image
+                        class="backgroundImage"
+                        src="{{ currentSportMode.src }}"
+                        >
+                </image>
+                <text class="todayDateText">{{todayDate}}</text>
+                <div class="sportData">
+                    <div class="dataSet">
+                        <image
+                                class="caloryImage"
+                                src="/common/images/sport_calory.png"
+                                >
+                        </image>
+                        <text class="caloryText">{{currentCalory.toFixed(0)+' kcal'}}</text>
+<!--                        <text class="caloryText">{{'1000 kcal'}}</text>-->
+                        <image
+                                class="heartRateImage"
+                                src="/common/images/heart_rate.png"
+                                >
+                        </image>
+                        <text class="heartRateText">{{heartRate.toFixed(0)+' 次/分'}}</text>
+<!--                        <text class="heartRateText">{{'200 次/分'}}</text>-->
+                    </div>
+                    <text class="timeText">{{currentTimeToShow}}</text>
+                    <div class="buttonSet">
+                        <button
+                                class="sportBtn"
+                                type="circle"
+                                icon="/common/images/sport_exit.png"
+                                @click="exitSport"
+                                >
+                        </button>
+                        <button
+                                show="{{onSport}}"
+                                disabled="{{isFinished}}"
+                                class="sportBtn"
+                                type="circle"
+                                icon="/common/images/sport_stop.png"
+                                @click="stopSport"
+                                >
+                        </button>
+                        <button
+                                show="{{!onSport}}"
+                                disabled="{{isFinished}}"
+                                class="sportBtn"
+                                type="circle"
+                                icon="/common/images/sport_continue.png"
+                                @click="continueSport"
+                                >
+                        </button>
+                        <button
+                                class="sportBtn"
+                                disabled="{{onSubmission}}"
+                                type="circle"
+                                icon="/common/images/sport_finish.png"
+                                @click="finishSport"
+                                >
+                        </button>
+                    </div>
+                </div>
+                <progress
+                        class="outerProgress"
+                        type="ring"
+                        clockwise="false"
+                        style="color: {{percentColor}};secondary-color: {{secondaryColor}};"
+                        percent="{{percent}}"
+                        secondarypercent="{{secondarypercent}}"
+                        >
+                </progress>
+                <dialog id="hintDialog" class="dialog">
+                    <div class="dialog-div">
+                        <text class="dialog-title">
+                            Warning!!!数据上传失败
+                        </text>
+                        <text class="dialog-text">
+                            1.请将运动界面数据拍照留存。
+                        </text>
+                        <text class="dialog-text">
+                            2.检查wifi，确认联网后，再次点击上传。
+                        </text>
+                        <text class="dialog-text">
+                            3.多次上传失败后，或者应用退出、重启，于当日尽快联系管理员发送图片、反馈情况！
+                        </text>
+                        <div class="inner-btn">
+                            <button type="text" value="确定" onclick="closeInterceptor" class="btn-txt"></button>
+                        </div>
+                    </div>
+                </dialog>
+            </stack>
+        </div>
+        <div class="swiperContent2">
+
+        </div>
+    </swiper>
+
+</div>

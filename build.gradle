@@ -1,0 +1,55 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+// 加载签名信息
+def signingConfigPropsFile = rootProject.file("signing-config.properties")
+def signingConfigProps = new Properties()
+signingConfigProps.load((new FileInputStream(signingConfigPropsFile)))
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/ide_debug_device-0000001053822404-V3#section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+//            storeFile file(signingConfigProps['storeFile'])
+//            storePassword signingConfigProps['storePassword']
+//            keyAlias signingConfigProps['keyAlias']
+//            keyPassword signingConfigProps['keyPassword']
+//            signAlg signingConfigProps['signAlg']
+//            profile file(signingConfigProps['profile'])
+//            certpath file(signingConfigProps['certpath'])
+            storeFile = file('C:\\Users\\84013\\.ohos\\config\\auto_debug_MyApplication_com.alan.fitness_890086200300005548.p12')
+            storePassword = '0000001ADC9BE07DB2A186FC4B6F0B9B37C1CB03C7C9257F6A0614B56B0EF24327E11D37965A22B8109F'
+            keyAlias = 'debugKey'
+            keyPassword = '0000001A0E59163F3697328F0E8DE04A8FA73C04004E201BA292B424E59894041B00C035ADAC0BE9B6CD'
+            signAlg = 'SHA256withECDSA'
+            profile = file('C:\\Users\\84013\\.ohos\\config\\auto_debug_MyApplication_com.alan.fitness_890086200300005548.p7b')
+            certpath = file('C:\\Users\\84013\\.ohos\\config\\auto_debug_MyApplication_com.alan.fitness_890086200300005548.cer')
+        }
+    }
+    compileSdkVersion 6
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:3.1.5.0'
+        classpath 'com.huawei.ohos:decctest:1.2.7.19'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+}

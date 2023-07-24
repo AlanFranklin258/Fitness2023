@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.title {
+    width: 200px;
+    height: 80px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.formstyle {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.user {
+    margin-bottom: 10px;
+    height: 30px;
+    background-color: #303030;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.user text {
+    width: 80px;
+    letter-spacing: 5px;
+}
+
+.divider {
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #E5A35F;
+    stroke-width: 3px;
+    line-cap: round;
+}
+
+.input {
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+input {
+/*    background-color: #584E0A;*/
+    background-color: #303030;
+}
+
+.input input{
+    background-color: #A95017;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.toRegister{
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.registerBtn{
+    text-color: white;
+    font-size: 10px;
+}
+
+.dialog{
+    width: 60%;
+    height: 150px;
+}
+
+.dialog-div {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-text{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.inner-btn {
+    align-items: center;
+    font-size: 10px;
+}

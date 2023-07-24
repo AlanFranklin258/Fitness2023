@@ -1,0 +1,147 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.swiper {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    indicator-size: 6px;
+    indicator-bottom: 16px;
+    width: 100%;
+    indicator-selected-color: #E5A35F;
+}
+.swiperContent1 {
+    height: 100%;
+    width: 100%;
+}
+.backgroundImage1{
+    width: 70%;
+    height: 70%;
+    margin-left: 15%;
+    margin-top: 10%;
+    object-fit: contain;
+}
+.backgroundImage2{
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+    margin-top: 15%;
+    object-fit: contain;
+}
+.backgroundImage{
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    margin-top: 20%;
+    object-fit: contain;
+}
+.todayDateText{
+    width: 100%;
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.sportData{
+    width: 100%;
+    height: 50%;
+    margin-top: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataSet{
+    width: 70%;
+    height: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.caloryImage{
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    object-fit: contain;
+    background-color: white;
+}
+.caloryText{
+    width: 40%;
+    margin-left: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.heartRateImage{
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    object-fit: contain;
+    background-color: white;
+}
+.heartRateText{
+    width: 40%;
+    margin-left: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.timeText{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.buttonSet{
+    width: 50%;
+    height: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sportBtn{
+    width: 30px;
+    height: 30px;
+    background-color: #303030;
+}
+
+.outerProgress{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF6ED;
+}
+.dialog{
+    width: 100%;
+    height: 100%;
+}
+.dialog-div {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+}
+.dialog-title{
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.dialog-text{
+    width: 100%;
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.inner-btn {
+    width: 100%;
+    margin-top: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn-txt{
+    font-size: 10px;
+    font-weight: bold;
+}

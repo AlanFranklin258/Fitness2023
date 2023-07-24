@@ -1,0 +1,666 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.swiper {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    indicator-size: 6px;
+    indicator-bottom: 16px;
+    width: 100%;
+    indicator-selected-color: #E5A35F;
+}
+/* 团队竞技页 */
+.swiperContent1 {
+    height: 100%;
+    width: 100%;
+}
+.swiperInnerContent1{
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+}
+.todayDateText{
+    width: 70%;
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.yesterday{
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+.pkTeams{
+    width: 75%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.myTeam{
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.competitorTeam{
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.teamText{
+    width: 100%;
+    height: 30%;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.teamLogo{
+    width: 100%;
+    height: 30%;
+    object-fit: contain;
+}
+.teamBackgroundWin{
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/common/images/card_background_win.png');
+    background-size: cover;
+}
+.teamBackground{
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/common/images/card_background.png');
+    background-size: cover;
+}
+.memberCard{
+    width: 100%;
+    height: 45%;
+    flex-direction: row;
+}
+.memberInfo{
+    width: 55%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.memberNameText{
+    width: 100%;
+    height: 50%;
+    margin-left: 5px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: left;
+}
+.memberCaloryText{
+    width: 100%;
+    height: 50%;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: right;
+}
+.sportState{
+    width: 45%;
+    height: 100%;
+    background-image: url('/common/images/pk_background.png');
+    background-size: cover;
+}
+.sportState .sportModeImage{
+    width: 50%;
+    height: 50%;
+    margin-top: 25%;
+    margin-left: 25%;
+    object-fit: contain;
+}
+.memberDivider{
+    margin: 5px
+}
+.pkData{
+    width: 70%;
+    margin-top: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.dataText{
+    width: 30%;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.checkYesterday{
+    width: 40%;
+    height: 15px;
+    margin-top: 5px;
+    background-color: #A95017;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    text-color: white;
+}
+.returnToday{
+    width: 20%;
+    height: 15px;
+    margin-top: 5px;
+    background-color: #A95017;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    text-color: white;
+}
+/*.changeModeBtn{*/
+/*    width: 30%;*/
+/*    height: 15px;*/
+/*    margin-top: 10px;*/
+/*    background-color: #A95017;*/
+/*    border-style: solid;*/
+/*    border-color: white;*/
+/*    border-width: 1px;*/
+/*    border-radius: 10px;*/
+/*    font-size: 10px;*/
+/*    font-weight: bold;*/
+/*    text-align: center;*/
+/*    text-color: white;*/
+/*}*/
+.winDialog{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.winImage{
+    width: 96%;
+    height: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    object-fit: contain;
+}
+.winDialog .closeBtn{
+    width: 20px;
+    position: absolute;
+    right: 35px;
+    top: 35px;
+}
+.loseDialog{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.loseImage{
+    width: 96%;
+    height: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    object-fit: contain;
+}
+.loseDialog .closeBtn{
+    width: 20px;
+    position: absolute;
+    right: 35px;
+    top: 35px;
+}
+.newMedalDialog{
+    width: 70%;
+    height: 70%;
+    margin-top: 25%;
+    margin-left: 25%;
+    border-radius: 100px;
+}
+.congratText{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.unlockText{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.checkNewMedalBtn{
+    width: 40%;
+    height: 15px;
+    margin-top: 5px;
+    background-color: #A95017;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-color: white;
+}
+.dynamicProgress{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF6ED;
+}
+.dialog-div {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-text{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.inner-btn {
+    align-items: center;
+    font-size: 10px;
+}
+
+/* 首页运动页 */
+.swiperContent2 {
+    height: 100%;
+    width: 100%;
+}
+.swiperInnerContent2{
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+}
+.sportMode{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10%;
+    width: 80%;
+    height: 55%;
+}
+.sportModeImage{
+    width: 200;
+    object-fit: contain;
+}
+.prevBtn{
+    width: 40px;
+}
+.nextBtn{
+    width: 40px;
+}
+.sportModeText{
+    text-color: #E5A35F;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.upImg{
+    width: 10px;
+    height: 10px;
+}
+.newWeekDialog{
+    width: 70%;
+    height: 70%;
+    margin-top: 25%;
+    margin-left: 25%;
+    border-radius: 100px;
+}
+.newWeekDialogBackgroundImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sportModeProgress{
+    start-angle: 140;
+    total-angle: 80;
+    color: white;
+    background-color: #E5A35F;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 80%;
+    height: 80%;
+}
+
+/* 活动页 */
+.swiperContent3 {
+    height: 100%;
+    width: 100%;
+}
+.swiperInnerContent3{
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+}
+.userName{
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.userInfo{
+    width: 100%;
+    height: 80%;
+    overflow: scroll;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.competitionText{
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.divider {
+    margin-top: 2px;
+    color: white;
+    stroke-width: 2px;
+    line-cap: round;
+}
+.competitionWeek{
+    width: 100%;
+    height: 25px;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.weekImage{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.competitionChart{
+    width: 90%;
+    height: 60px;
+    margin-top: 5px;
+    flex-direction: row;
+}
+.competitionYAxis{
+    width: 10%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.yAxisText{
+    width: 100%;
+    font-size: 7px;
+    text-align: end;
+}
+.competitionXAxis{
+    width: 90%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.item{
+    width: 15px;
+    margin-left: 2px;
+    height: 100%;
+    flex-direction: column;
+}
+.bar{
+    width: 100%;
+    height: 80%;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.competitorBar{
+    width: 5px;
+    background-color: #FFF6ED;
+}
+.userBarStar{
+    width: 5px;
+    margin-left: 2px;
+    flex-direction: column;
+}
+.starImage{
+    width: 5px;
+    height: 5px;
+    margin-bottom: 2px;
+    object-fit: contain;
+}
+.userBar{
+    width: 5px;
+    background-color: #E5A35F;
+}
+.dayText{
+    width: 100%;
+    height: 20%;
+    font-size: 7px;
+}
+.weekWinImage{
+    margin-top: 5px;
+    width: 100%;
+    height: 25px;
+    object-fit: contain;
+}
+.winText{
+    width: 85%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.achievementText{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.medals{
+    width: 80%;
+    height: 60px;
+    margin-top: 5px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.medal{
+    width: 20%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.medalImage{
+    width: 80%;
+    height: 60%;
+    object-fit: contain;
+}
+.medalName{
+    width: 100%;
+    height: 20%;
+    font-size: 7px;
+    font-weight: bold;
+    text-align: center;
+}
+.sportRecordText{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.sportRecords{
+    width: 70%;
+    flex-direction: column;
+}
+.sportRecord{
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+.calory{
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+/*    background-color: #211D1B;*/
+    background-image: url('/common/images/record_line_background.png');
+    background-size: cover;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.caloryImage{
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    object-fit: contain;
+    background-color: white;
+}
+.caloryText{
+    width: 40%;
+    margin-left: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+    letter-spacing: 5px;
+}
+.caloryText2{
+    width: 40%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.sportDateText{
+    width: 20%;
+    height: 100%;
+    margin-left: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.exitApp{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.exitBtn{
+    width: 40%;
+    height: 20px;
+    margin-top: 15px;
+    background-image: url("/common/images/exit_button.png");
+    background-size: cover;
+}
+.footer{
+    width: 100%;
+    height: 50px;
+}
+/*.staticProgress{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    color: #E5A35F;*/
+/*    secondary-color: #F2CCA6;*/
+/*    background-color: #FFF6ED;*/
+/*}*/
+
+.medalDialog{
+    width: 70%;
+    height: 70%;
+    margin-top: 25%;
+    margin-left: 25%;
+    border-radius: 100px;
+}
+.medalDialogBackgroundImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.medalDialogBackgroundEdgeImage{
+    width: 85%;
+    height: 85%;
+    margin-top: 12px;
+    margin-left: 8px;
+    object-fit: cover;
+}
+.medalDialogDotImage{
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}
+.medalDialogDotEdgeImage{
+    width: 5px;
+    height: 5px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 25px;
+    right: 45px;
+}
+.medalDialogInfo{
+    height: 100%;
+    margin-right: 11px;
+    flex-direction: column;
+    align-items: center;
+}
+.titleText{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+.closeBtnImage{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    position: absolute;
+    right: 40px;
+    top: 25px;
+}
+.medalInDialog{
+    width: 50%;
+    height: 30%;
+    margin-top: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+.medalImageInDialog{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+.medalNameInDialog{
+    width: 100%;
+    height: 40%;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.medalDescription{
+    width: 60%;
+    margin-top: 5px;
+    font-size: 7px;
+}

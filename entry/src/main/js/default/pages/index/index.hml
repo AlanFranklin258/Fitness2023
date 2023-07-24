@@ -1,0 +1,567 @@
+<!-- 主页 -->
+<div class="container">
+    <swiper 
+            class="swiper" 
+            id="swiper" 
+            index="{{ swiperindex }}"
+            indicator="true" 
+            indicatormask="false" 
+            loop="false"
+            >
+        <!--团队竞技页-->
+        <div class="swiperContent1">
+            <stack class="stack-parent">
+                <div class="swiperInnerContent1">
+                    <text class="todayDateText">{{todayDate}}</text>
+                    <div class="pkTeams">
+                        <div class="myTeam">
+                            <text class="teamText" show="{{!yesterday}}">我的队伍</text>
+                            <div class="teamBackground" show="{{!yesterday}}">
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{user_show.name}}</text>
+                                        <text class="memberCaloryText">{{user_show.sport_min.toFixed(0) +' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{user_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                                <divider class="memberDivider"></divider>
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{teammate_show.name}}</text>
+                                        <text class="memberCaloryText">{{teammate_show.sport_min.toFixed(0)+' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{teammate_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                            </div>
+                            <image
+                                    class="teamLogo"
+                                    show="{{yesterday && yesterdayWin}}"
+                                    src="/common/images/win.png"
+                                    >
+                            </image>
+                            <div class="teamBackgroundWin" show="{{yesterday && yesterdayWin}}">
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{user_show.name}}</text>
+                                        <text class="memberCaloryText">{{user_show.sport_min.toFixed(0) +' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{user_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                                <divider class="memberDivider"></divider>
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{teammate_show.name}}</text>
+                                        <text class="memberCaloryText">{{teammate_show.sport_min.toFixed(0)+' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{teammate_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                            </div>
+                            <image
+                                    class="teamLogo"
+                                    show="{{yesterday && !yesterdayWin}}"
+                                    src="/common/images/lose.png"
+                                    >
+                            </image>
+                            <div class="teamBackground" show="{{yesterday && !yesterdayWin}}">
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{user_show.name}}</text>
+                                        <text class="memberCaloryText">{{user_show.sport_min.toFixed(0) +' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{user_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                                <divider class="memberDivider"></divider>
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{teammate_show.name}}</text>
+                                        <text class="memberCaloryText">{{teammate_show.sport_min.toFixed(0)+' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{teammate_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="competitorTeam">
+                            <text class="teamText" show="{{!yesterday}}">对手队伍</text>
+                            <div class="teamBackground" show="{{!yesterday}}">
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{competitor0_show.name}}</text>
+                                        <text class="memberCaloryText">{{competitor0_show.sport_min.toFixed(0)+' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{competitor0_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                                <divider class="memberDivider"></divider>
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{competitor1_show.name}}</text>
+                                        <text class="memberCaloryText">{{competitor1_show.sport_min.toFixed(0) + ' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{competitor1_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                            </div>
+                            <image
+                                    class="teamLogo"
+                                    show="{{yesterday && !yesterdayWin}}"
+                                    src="/common/images/win.png"
+                                    >
+                            </image>
+                            <div class="teamBackgroundWin" show="{{yesterday && !yesterdayWin}}">
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{competitor0_show.name}}</text>
+                                        <text class="memberCaloryText">{{competitor0_show.sport_min.toFixed(0)+' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{competitor0_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                                <divider class="memberDivider"></divider>
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{competitor1_show.name}}</text>
+                                        <text class="memberCaloryText">{{competitor1_show.sport_min.toFixed(0) + ' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{competitor1_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                            </div>
+                            <image
+                                    class="teamLogo"
+                                    show="{{yesterday && yesterdayWin}}"
+                                    src="/common/images/lose.png"
+                                    >
+                            </image>
+                            <div class="teamBackground" show="{{yesterday && yesterdayWin}}">
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{competitor0_show.name}}</text>
+                                        <text class="memberCaloryText">{{competitor0_show.sport_min.toFixed(0)+' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{competitor0_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                                <divider class="memberDivider"></divider>
+                                <div class="memberCard">
+                                    <div class="memberInfo">
+                                        <text class="memberNameText">{{competitor1_show.name}}</text>
+                                        <text class="memberCaloryText">{{competitor1_show.sport_min.toFixed(0) + ' min'}}</text>
+                                    </div>
+                                    <div class="sportState">
+                                        <image
+                                                class="sportModeImage"
+                                                src="{{competitor1_show.sportModeImg}}"
+                                                >
+                                        </image>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pkData">
+                        <text class="dataText">{{myTeamSportMin.toFixed(0)+' min'}}</text>
+                        <text class="dataText">VS</text>
+                        <text class="dataText">{{coTeamSportMin.toFixed(0)+' min'}}</text>
+                    </div>
+                    <button class="checkYesterday" show="{{!yesterday}}" @click="checkYesterday">查看昨日比赛结果</button>
+                    <button class="returnToday" show="{{yesterday}}" @click="returnToday">返回</button>
+
+                </div>
+                <progress
+                        class="dynamicProgress"
+                        style="color: {{percentColor}};secondary-color: {{secondaryColor}};"
+                        type="ring"
+                        clockwise="false"
+                        percent="{{percent}}"
+                        secondarypercent="{{secondarypercent}}"
+                        >
+                </progress>
+                <dialog id="hintDialogYesterday1" class="hintDialogYesterday">
+                    <div class="dialog-div">
+                        <text class="dialog-text">没有昨天的数据！</text>
+                        <div class="inner-btn">
+                            <button type="text" value="确定" onclick="closeDialog" class="btn-txt"></button>
+                        </div>
+                    </div>
+                </dialog>
+            </stack>
+        </div>
+
+        <!-- 首页运动页 -->
+        <div class="swiperContent2">
+            <stack class="stack-parent">
+                <div class="swiperInnerContent2">
+                    <div class="sportMode">
+                        <button
+                                class="prevBtn"
+                                type="circle"
+                                icon="/common/images/arrow_prev.png"
+                                @click="prevSportMode"
+                                >
+                        </button>
+                        <image
+                                class="sportModeImage"
+                                src="{{ selectedSportMode.src }}"
+                                @click="beginSport"
+                                >
+                        </image>
+                        <button
+                                class="nextBtn"
+                                type="circle"
+                                icon="/common/images/arrow_next.png"
+                                @click="nextSportMode"
+                                >
+                        </button>
+                    </div>
+                    <button
+                            class="sportModeText"
+                            type="text"
+                            @click="beginSport"
+                            >
+                        {{selectedSportMode.name}}
+                    </button>
+                    <image
+                            class="upImg"
+                            style="object-fit: scale-down;"
+                            src="/common/images/arrow_up.png"
+                            >
+                    </image>
+                </div>
+                <progress
+                        class="sportModeProgress"
+                        type="arc"
+                        percent="{{selectedSportMode.percent}}"
+                        >
+                </progress>
+
+            </stack>
+        </div>
+
+        <!-- 活动页 -->
+        <div class="swiperContent3">
+            <stack class="stack-parent">
+                <div class="swiperInnerContent3">
+                    <text class="userName">{{user.username}}</text>
+                    <div class="userInfo">
+                        <text class="competitionText">胜负记录</text>
+                        <divider class="divider"></divider>
+                        <div class="competitionWeek">
+                            <image
+                                    show="{{!showWeek2}}"
+                                    class="weekImage"
+                                    src="/common/images/week1.png"
+                                    @click="changeWeekData"
+                                    >
+                            </image>
+                            <image
+                                    show="{{showWeek2}}"
+                                    class="weekImage"
+                                    src="/common/images/week2.png"
+                                    @click="changeWeekData"
+                                    >
+                            </image>
+                        </div>
+                        <div class="competitionChart">
+                            <div class="competitionYAxis">
+                                <text class="yAxisText">1000</text>
+                                <text class="yAxisText">500</text>
+                                <text class="yAxisText" style="margin-bottom: 10px;">0</text>
+                            </div>
+                            <div class="competitionXAxis">
+                                <div class="item" for="{{item in barData}}">
+                                    <div class="bar">
+                                        <div
+                                                class="competitorBar"
+                                                style="height: {{item.dataCompetitor}};"
+                                                >
+                                        </div>
+                                        <div class="userBarStar">
+                                            <image
+                                                    show="{{item.win}}"
+                                                    class="starImage"
+                                                    src="/common/images/star.png"
+                                                    >
+                                            </image>
+                                            <div
+                                                    class="userBar"
+                                                    style="height: {{item.dataUser}};"
+                                                    >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <text class="dayText">{{item.day}}</text>
+                                </div>
+                            </div>
+                        </div>
+                        <image
+                                class="weekWinImage"
+                                show="{{weekWin}}"
+                                src="/common/images/weekWin.png"
+                                >
+                        </image>
+                        <image
+                                class="weekWinImage"
+                                show="{{!weekWin}}"
+                                src="/common/images/weekNotWin.png"
+                                >
+                        </image>
+                        <text class="achievementText">获得勋章</text>
+                        <divider class="divider"></divider>
+                        <div class="medals">
+                            <div class="medal" for="{{item in medals}}">
+                                <image
+                                        class="medalImage"
+                                        show="{{item.abtained}}"
+                                        src="{{item.src}}"
+                                        @click="openMedalDialog({{item}})"
+                                        >
+                                </image>
+                                <image
+                                        class="medalImage"
+                                        show="{{!item.abtained}}"
+                                        src="{{item.src_denied}}"
+                                        @click="openMedalDialog({{item}})"
+                                        >
+                                </image>
+                                <text class="medalName">{{item.name}}</text>
+                            </div>
+                        </div>
+                        <text class="sportRecordText">运动记录</text>
+                        <divider class="divider"></divider>
+                        <div class="sportRecords">
+                            <div class="sportRecord" for="{{item in sportRecords}}">
+                                <div class="calory">
+                                    <image
+                                            class="caloryImage"
+                                            src="/common/images/time_icon.png"
+                                            >
+                                    </image>
+                                    <text class="caloryText">{{item.sport_min.toFixed(0)}}</text>
+                                    <text class="caloryText2">min</text>
+                                </div>
+                                <text class="sportDateText">{{item.month_date}}</text>
+                            </div>
+                        </div>
+                        <div class="exitApp">
+                            <button class="exitBtn" @click="appExit"></button>
+                            
+                        </div>
+                        <div class="footer"></div>
+                    </div>
+                </div>
+                <!-- 因为鸿蒙提供的dialog实在太难用了，所以用stack叠元素的方式来模拟弹窗效果 -->
+                <div class="newWeekDialog" show="{{showNewWeekDialog}}">
+                    <stack class="stack-parent">
+                        <image
+                                class="newWeekDialogBackgroundImage"
+                                src="/common/images/dialog_background_new_week.png"
+                                >
+                        </image>
+                        <image
+                                class="closeBtnImage"
+                                src="/common/images/dialog_close.png"
+                                @click="closeNewWeekDialog"
+                                >
+                        </image>
+                    </stack>
+                </div>
+                <div class="winDialog" show="{{winDialog}}">
+                    <stack class="stack-parent">
+                        <image
+                                class="winImage"
+                                src="/common/images/win_background.png"
+                                >
+                        </image>
+                        <image
+                                class="closeBtnImage"
+                                src="/common/images/dialog_close.png"
+                                @click="closeWinDialog"
+                                >
+                        </image>
+                    </stack>
+                </div>
+                <div class="loseDialog" show="{{loseDialog}}">
+                    <stack class="stack-parent">
+                        <image
+                                class="loseImage"
+                                src="/common/images/lose_background.png"
+                                >
+                        </image>
+                        <image
+                                class="closeBtnImage"
+                                src="/common/images/dialog_close.png"
+                                @click="closeLoseDialog"
+                                >
+                        </image>
+                    </stack>
+                </div>
+                <div class="newMedalDialog" show="{{getNewMedalDialog}}">
+                    <stack class="stack-parent">
+                        <image
+                                class="medalDialogBackgroundImage"
+                                src="/common/images/dialog_background.png"
+                                >
+                        </image>
+                        <image
+                                class="medalDialogBackgroundEdgeImage"
+                                src="/common/images/dialog_background_edge.png"
+                                >
+                        </image>
+                        <image
+                                class="medalDialogDotImage"
+                                src="/common/images/dialog_dot.png"
+                                >
+                        </image>
+                        <image
+                                class="medalDialogDotEdgeImage"
+                                src="/common/images/dialog_dot_edge.png"
+                                >
+                        </image>
+                        <div class="medalDialogInfo">
+                            <text class="titleText">通知</text>
+                            <text class="congratText">恭喜您！</text>
+                            <text class="unlockText">解锁了新的徽章</text>
+                            <button class="checkNewMedalBtn" @click="checkNewMedalDialog">
+                                查 看
+                            </button>
+                        </div>
+                        <image
+                                class="closeBtnImage"
+                                src="/common/images/dialog_close.png"
+                                @click="closeNewMedalDialog"
+                                >
+                        </image>
+                    </stack>
+                </div>
+                <div class="medalDialog" show="{{showMedalDialog}}">
+                    <stack class="stack-parent">
+                        <image
+                                class="medalDialogBackgroundImage"
+                                src="/common/images/dialog_background.png"
+                                >
+                        </image>
+                        <image
+                                class="medalDialogBackgroundEdgeImage"
+                                src="/common/images/dialog_background_edge.png"
+                                >
+                        </image>
+                        <image
+                                class="medalDialogDotImage"
+                                src="/common/images/dialog_dot.png"
+                                >
+                        </image>
+                        <image
+                                class="medalDialogDotEdgeImage"
+                                src="/common/images/dialog_dot_edge.png"
+                                >
+                        </image>
+                        <div class="medalDialogInfo">
+                            <text class="titleText">徽章</text>
+                            <div class="medalInDialog">
+                                <image
+                                        class="medalImageInDialog"
+                                        show="{{selectedMedal.abtained}}"
+                                        src="{{selectedMedal.src}}"
+                                        >
+                                </image>
+                                <image
+                                        class="medalImageInDialog"
+                                        show="{{!selectedMedal.abtained}}"
+                                        src="{{selectedMedal.src_denied}}"
+                                        >
+                                </image>
+                                <text class="medalNameInDialog">{{selectedMedal.name}}</text>
+                            </div>
+                            <text class="medalDescription">{{selectedMedal.description}}</text>
+                        </div>
+                        <image
+                                class="closeBtnImage"
+                                src="/common/images/dialog_close.png"
+                                @click="closeMedalDialog"
+                                >
+                        </image>
+                    </stack>
+                </div>
+                <progress
+                        class="dynamicProgress"
+                        style="color: {{percentColor}};secondary-color: {{secondaryColor}};"
+                        type="ring"
+                        clockwise="false"
+                        percent="{{percent}}"
+                        secondarypercent="{{secondarypercent}}"
+                        >
+                </progress>
+                <dialog id="hintDialogYesterday2" class="hintDialogYesterday">
+                    <div class="dialog-div">
+                        <text class="dialog-text">没有昨天的数据！</text>
+                        <div class="inner-btn">
+                            <button type="text" value="确定" onclick="closeDialog" class="btn-txt"></button>
+                        </div>
+                    </div>
+                </dialog>
+            </stack>
+
+        </div>
+    </swiper>
+</div>

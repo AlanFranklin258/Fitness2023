@@ -1,0 +1,31 @@
+<div class="container">
+    <text class="title">
+        登录
+    </text>
+    <form class="formstyle" onsubmit='onSubmit'>
+        <div class="user">
+            <text>用户名</text>
+            <divider class="divider" vertical="true"></divider>
+            <input type='text' name='username'></input>
+        </div>
+        <div class="user">
+            <text>密 码</text>
+            <divider class="divider" vertical="true"></divider>
+            <input type='text' name='password'></input>
+        </div>
+        <div class="toRegister">
+            <button class="registerBtn" type="text" @click="appExit">退 出 应 用</button>
+        </div>
+        <div class="input">
+            <input type="submit">确 定</input>
+        </div>
+    </form>
+    <dialog id="hintDialog" class="dialog">
+        <div class="dialog-div">
+            <text class="dialog-text">用户名或密码错误！{{username}}:{{password}}</text>
+            <div class="inner-btn">
+                <button type="text" value="确定" onclick="closeDialog" class="btn-txt"></button>
+            </div>
+        </div>
+    </dialog>
+</div>
